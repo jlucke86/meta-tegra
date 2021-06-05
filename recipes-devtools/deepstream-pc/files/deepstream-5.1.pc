@@ -1,0 +1,13 @@
+prefix=/opt/nvidia/deepstream/deepstream-5.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/sources/includes
+#toolsdir=${exec_prefix}/bin
+
+Name: deepstream
+Description: NVIDIA DeepStream SDK
+Version: 5.1
+#Requires: gstreamer-1.0 >= 1.14.4
+Libs: -L${libdir} -lnvds_meta -lnvdsgst_meta -lnvdsgst_helper -lnvds_logger -Wl,-rpath=${libdir}
+Cflags: -I${includedir}
+
